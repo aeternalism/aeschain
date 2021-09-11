@@ -1,7 +1,12 @@
 #!/bin/bash
 CHAIN_ID="aeternalism"
 MONIKER=$1
-APP_HOME="${2:-$HOME}/.aeschain"
+APP_HOME=${2:-$HOME/.aeschain}
+SEEDS_URL=${3:-https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/testnet/seeds}
+GENESIS_URL=${4:-https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/testnet/genesis.json}
+
+# get seeds
+SEEDS=$(curl ${SEEDS_URL})
 
 # check for existed genesis
 GENESIS=${APP_HOME}/config/genesis.json
@@ -10,17 +15,13 @@ if [ ! -f "$GENESIS" ]; then
   aeschaind init ${MONIKER} --chain-id ${CHAIN_ID} --home ${APP_HOME}
 
   # override genesis
-  curl https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/testnet/genesis.json > ${APP_HOME}/config/genesis.json
+  curl ${GENESIS_URL} > ${APP_HOME}/config/genesis.json
 
   # validate genesis
   aeschaind validate-genesis
 
   # configure chain
-  ## get seeds
-  SEEDS=$(curl https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/testnet/seeds)
-
   ## P2P
-  sed -i -r "s/seeds = \"\"/seeds = \"${SEEDS}\"/" ${APP_HOME}/config/config.toml
   sed -i -r "s/seeds = \"\"/seeds = \"${SEEDS}\"/" ${APP_HOME}/config/config.toml
 
   ## Consensus
@@ -30,9 +31,6 @@ if [ ! -f "$GENESIS" ]; then
   sed -i -r 's/prometheus = false/prometheus = true/' ${APP_HOME}/config/config.toml
 fi
 
-# get seeds
-SEEDS=$(curl https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/testnet/seeds)
-
 # run the node
 aeschaind start \
   --moniker ${MONIKER} \
@@ -40,3 +38,4 @@ aeschaind start \
   --p2p.seeds ${SEEDS} \
   --p2p.persistent_peers ${SEEDS} \
   --home ${APP_HOME}
+  

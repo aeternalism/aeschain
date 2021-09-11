@@ -1,16 +1,16 @@
 #!/bin/bash
-APP_HOME="${HOME}/.aeschain"
 CHAIN_ID="aeternalism"
 MONIKER=$1
 STAKE_KEY=$2
-STAKE_AMOUNT=100000000000aes
-WEBSITE="https://aeslabs.one"
-DETAILS="Foundation validator"
+APP_HOME=${3:-$HOME/.aeschain}
+STAKE_AMOUNT=${4:-100000000000uaes}
+WEBSITE=${4:-https://aeslabs.one}
+DETAILS=${5:-Foundation Node}
 
 # add validator to genesis
 aeschaind tx staking create-validator \
   --amount ${STAKE_AMOUNT} \
-  --pubkey $(aeschaind tendermint show-validator) \
+  --pubkey $(aeschaind tendermint show-validator --home ${APP_HOME}) \
   --moniker ${MONIKER} \
   --chain-id ${CHAIN_ID} \
   --commission-rate "0.10" \

@@ -1,7 +1,7 @@
 #!/bin/bash
-USER="bryan"
-APP_HOME="/home/${USER}/.aeschain"
 APP_BINARY="aeschaind"
+USER=${1:-$USER}
+APP_HOME="/home/${USER}/.aeschain"
 GOPATH="/home/${USER}/go"
 
 # Must run with root shell

@@ -1,6 +1,6 @@
 #!/bin/bash
-APP_HOME="${HOME}/.aeschain"
 APP_BINARY="aeschaind"
+APP_HOME="${1:-$HOME/.aeschain}"
 
 # check GOPATH
 if [ -z "${GOPATH}" ]; then

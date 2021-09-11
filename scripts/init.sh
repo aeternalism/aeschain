@@ -1,17 +1,18 @@
 #!/bin/bash
-APP_HOME="${HOME}/.aeschain"
 CHAIN_ID="aeternalism"
 MONIKER=$1
+APP_HOME=${2:-$HOME/.aeschain}
 FOUNDATION="AesLabs"
-FOUNDATION_AMOUNT=100000000000000aes
-STAKE_AMOUNT=1000000000000aes
+FOUNDATION_AMOUNT=100000000000000uaes
+STAKE_AMOUNT=1000000000000uaes
 
 # init chain
 # generate genesis.json & config files
 aeschaind init ${MONIKER} --chain-id ${CHAIN_ID} --home ${APP_HOME}
 
-# change denom to aes
-sed -i -r 's/stake/aes/g' ${APP_HOME}/config/genesis.json
+# change denom to uaes
+# 1 aes = 1000000 uaes
+sed -i -r 's/stake/uaes/g' ${APP_HOME}/config/genesis.json
 
 # add foundation & validator keys
 if ! aeschaind keys show -a ${FOUNDATION} --keyring-backend file; then 
@@ -28,7 +29,13 @@ aeschaind add-genesis-account $(aeschaind keys show -a ${MONIKER} --keyring-back
 # add validator to genesis
 aeschaind gentx ${MONIKER} ${STAKE_AMOUNT} \
   --keyring-backend file \
-  --chain-id ${CHAIN_ID}
+  --chain-id ${CHAIN_ID} \
+  --moniker ${MONIKER} \
+  --commission-rate "0.20" \
+  --commission-max-rate "0.3" \
+  --commission-max-change-rate "0.01" \
+  --website "https://aeslabs.one"
+  --details "Foundation Node - Claude Monet"
 
 aeschaind collect-gentxs
 
