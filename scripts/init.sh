@@ -34,7 +34,7 @@ aeschaind gentx ${MONIKER} ${STAKE_AMOUNT} \
   --commission-rate "0.20" \
   --commission-max-rate "0.3" \
   --commission-max-change-rate "0.01" \
-  --website "https://aeslabs.one"
+  --website "https://aeslabs.one" \
   --details "Foundation Node - Claude Monet"
 
 aeschaind collect-gentxs

@@ -2,14 +2,8 @@
 APP_BINARY="aeschaind"
 APP_HOME="${1:-$HOME/.aeschain}"
 
-# check GOPATH
-if [ -z "${GOPATH}" ]; then
-  echo "Not found GOPATH"
-  exit 1
-fi
-
 # install cosmovisor
-cd ${GOPATH}
+cd $(go env GOPATH)
 go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
 
 # init cosmovisor directory
