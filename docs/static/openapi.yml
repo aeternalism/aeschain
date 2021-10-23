@@ -70,11 +70,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: address
           description: address is the address to query balances for.
@@ -172,11 +170,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: address
           description: address is the address to query balances for.
@@ -302,11 +298,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: pagination.key
           description: |-
@@ -443,11 +437,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: denom
           description: denom is the coin denom to query the metadata for.
@@ -504,11 +496,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       tags:
         - Query
   /cosmos/bank/v1beta1/supply:
@@ -559,11 +549,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       tags:
         - Query
   '/cosmos/bank/v1beta1/supply/{denom}':
@@ -609,11 +597,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: denom
           description: denom is the coin denom to query balances for.
@@ -671,11 +657,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       tags:
         - Query
   '/cosmos/distribution/v1beta1/delegators/{delegatorAddress}/rewards':
@@ -756,11 +740,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: delegatorAddress
           description: delegator_address defines the delegator address to query for.
@@ -816,11 +798,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: delegatorAddress
           description: delegator_address defines the delegator address to query for.
@@ -869,11 +849,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: delegatorAddress
           description: delegator_address defines the delegator address to query for.
@@ -913,11 +891,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: delegatorAddress
           description: delegator_address defines the delegator address to query for.
@@ -966,11 +942,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       tags:
         - Query
   '/cosmos/distribution/v1beta1/validators/{validatorAddress}/commission':
@@ -1023,11 +997,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: validatorAddress
           description: validator_address defines the validator address to query for.
@@ -1093,11 +1065,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: validatorAddress
           description: validator_address defines the validator address to query for.
@@ -1173,11 +1143,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: validatorAddress
           description: validator_address defines the validator address to query for.
@@ -1263,7 +1231,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -1321,12 +1289,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -1477,7 +1440,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -1535,12 +1498,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -1714,7 +1672,7 @@ paths:
               evidence:
                 type: object
                 properties:
-                  typeUrl:
+                  '@type':
                     type: string
                     description: >-
                       A URL/resource name that uniquely identifies the type of
@@ -1771,12 +1729,7 @@ paths:
                       might be
 
                       used with implementation specific semantics.
-                  value:
-                    type: string
-                    format: byte
-                    description: >-
-                      Must be a valid serialized protocol buffer of the above
-                      specified type.
+                additionalProperties: {}
                 description: >-
                   `Any` contains an arbitrary serialized protocol buffer message
                   along with a
@@ -1903,7 +1856,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -1961,12 +1914,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -2174,7 +2122,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -2232,12 +2180,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -2382,7 +2325,7 @@ paths:
                     content:
                       type: object
                       properties:
-                        typeUrl:
+                        '@type':
                           type: string
                           description: >-
                             A URL/resource name that uniquely identifies the
@@ -2440,12 +2383,7 @@ paths:
                             scheme) might be
 
                             used with implementation specific semantics.
-                        value:
-                          type: string
-                          format: byte
-                          description: >-
-                            Must be a valid serialized protocol buffer of the
-                            above specified type.
+                      additionalProperties: {}
                       description: >-
                         `Any` contains an arbitrary serialized protocol buffer
                         message along with a
@@ -2669,7 +2607,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -2727,12 +2665,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -2948,7 +2881,7 @@ paths:
                   content:
                     type: object
                     properties:
-                      typeUrl:
+                      '@type':
                         type: string
                         description: >-
                           A URL/resource name that uniquely identifies the type
@@ -3006,12 +2939,7 @@ paths:
                           scheme) might be
 
                           used with implementation specific semantics.
-                      value:
-                        type: string
-                        format: byte
-                        description: >-
-                          Must be a valid serialized protocol buffer of the
-                          above specified type.
+                    additionalProperties: {}
                     description: >-
                       `Any` contains an arbitrary serialized protocol buffer
                       message along with a
@@ -3212,7 +3140,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -3270,12 +3198,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -3475,7 +3398,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -3533,12 +3456,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -3765,7 +3683,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -3823,12 +3741,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -3996,7 +3909,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -4054,12 +3967,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -4260,7 +4168,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -4318,12 +4226,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -4549,7 +4452,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -4607,12 +4510,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -4786,11 +4684,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       tags:
         - Query
   /cosmos/slashing/v1beta1/signing_infos:
@@ -4890,11 +4786,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: pagination.key
           description: |-
@@ -5014,11 +4908,9 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
-                    value:
-                      type: string
-                      format: byte
+                  additionalProperties: {}
       parameters:
         - name: consAddress
           description: cons_address is the address to query signing info of
@@ -5128,7 +5020,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -5186,12 +5078,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -5518,7 +5405,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -5576,12 +5463,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -5860,7 +5742,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -5918,12 +5800,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -6114,7 +5991,7 @@ paths:
                     consensusPubkey:
                       type: object
                       properties:
-                        typeUrl:
+                        '@type':
                           type: string
                           description: >-
                             A URL/resource name that uniquely identifies the
@@ -6172,12 +6049,7 @@ paths:
                             scheme) might be
 
                             used with implementation specific semantics.
-                        value:
-                          type: string
-                          format: byte
-                          description: >-
-                            Must be a valid serialized protocol buffer of the
-                            above specified type.
+                      additionalProperties: {}
                       description: >-
                         `Any` contains an arbitrary serialized protocol buffer
                         message along with a
@@ -6453,7 +6325,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -6511,12 +6383,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -6705,7 +6572,7 @@ paths:
                   consensusPubkey:
                     type: object
                     properties:
-                      typeUrl:
+                      '@type':
                         type: string
                         description: >-
                           A URL/resource name that uniquely identifies the type
@@ -6763,12 +6630,7 @@ paths:
                           scheme) might be
 
                           used with implementation specific semantics.
-                      value:
-                        type: string
-                        format: byte
-                        description: >-
-                          Must be a valid serialized protocol buffer of the
-                          above specified type.
+                    additionalProperties: {}
                     description: >-
                       `Any` contains an arbitrary serialized protocol buffer
                       message along with a
@@ -7022,7 +6884,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -7080,12 +6942,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -7314,7 +7171,7 @@ paths:
                         consensusPubkey:
                           type: object
                           properties:
-                            typeUrl:
+                            '@type':
                               type: string
                               description: >-
                                 A URL/resource name that uniquely identifies the
@@ -7372,12 +7229,7 @@ paths:
                                 scheme) might be
 
                                 used with implementation specific semantics.
-                            value:
-                              type: string
-                              format: byte
-                              description: >-
-                                Must be a valid serialized protocol buffer of
-                                the above specified type.
+                          additionalProperties: {}
                           description: >-
                             `Any` contains an arbitrary serialized protocol
                             buffer message along with a
@@ -7638,7 +7490,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -7696,12 +7548,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -7876,7 +7723,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -7934,12 +7781,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -8087,7 +7929,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -8145,12 +7987,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -8287,7 +8124,7 @@ paths:
                     consensusPubkey:
                       type: object
                       properties:
-                        typeUrl:
+                        '@type':
                           type: string
                           description: >-
                             A URL/resource name that uniquely identifies the
@@ -8345,12 +8182,7 @@ paths:
                             scheme) might be
 
                             used with implementation specific semantics.
-                        value:
-                          type: string
-                          format: byte
-                          description: >-
-                            Must be a valid serialized protocol buffer of the
-                            above specified type.
+                      additionalProperties: {}
                       description: >-
                         `Any` contains an arbitrary serialized protocol buffer
                         message along with a
@@ -8626,7 +8458,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -8684,12 +8516,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -8876,7 +8703,7 @@ paths:
                   consensusPubkey:
                     type: object
                     properties:
-                      typeUrl:
+                      '@type':
                         type: string
                         description: >-
                           A URL/resource name that uniquely identifies the type
@@ -8934,12 +8761,7 @@ paths:
                           scheme) might be
 
                           used with implementation specific semantics.
-                      value:
-                        type: string
-                        format: byte
-                        description: >-
-                          Must be a valid serialized protocol buffer of the
-                          above specified type.
+                    additionalProperties: {}
                     description: >-
                       `Any` contains an arbitrary serialized protocol buffer
                       message along with a
@@ -9193,7 +9015,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -9251,12 +9073,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -9472,7 +9289,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -9530,12 +9347,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -9777,7 +9589,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -9835,12 +9647,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -10044,7 +9851,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -10102,12 +9909,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -10333,7 +10135,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -10391,12 +10193,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -10562,10 +10359,10 @@ paths:
           type: boolean
       tags:
         - Query
-  /wasm/v1beta1/code:
+  /cosmwasm/wasm/v1/code:
     get:
       summary: Codes gets the metadata for all stored wasm codes
-      operationId: CosmwasmWasmV1Beta1Codes
+      operationId: CosmwasmWasmV1Codes
       responses:
         '200':
           description: A successful response.
@@ -10585,10 +10382,6 @@ paths:
                     dataHash:
                       type: string
                       format: byte
-                    source:
-                      type: string
-                    builder:
-                      type: string
                   title: CodeInfoResponse contains code meta data from CodeInfo
               pagination:
                 description: pagination defines the pagination in the response.
@@ -10626,7 +10419,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -10684,12 +10477,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -10850,10 +10638,10 @@ paths:
           type: boolean
       tags:
         - Query
-  '/wasm/v1beta1/code/{codeId}':
+  '/cosmwasm/wasm/v1/code/{codeId}':
     get:
       summary: Code gets the binary code and metadata for a singe wasm code
-      operationId: CosmwasmWasmV1Beta1Code
+      operationId: CosmwasmWasmV1Code
       responses:
         '200':
           description: A successful response.
@@ -10871,10 +10659,6 @@ paths:
                   dataHash:
                     type: string
                     format: byte
-                  source:
-                    type: string
-                  builder:
-                    type: string
                 title: CodeInfoResponse contains code meta data from CodeInfo
               data:
                 type: string
@@ -10897,7 +10681,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -10955,12 +10739,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -11080,10 +10859,10 @@ paths:
           format: uint64
       tags:
         - Query
-  '/wasm/v1beta1/code/{codeId}/contracts':
+  '/cosmwasm/wasm/v1/code/{codeId}/contracts':
     get:
       summary: ContractsByCode lists all smart contracts for a code id
-      operationId: CosmwasmWasmV1Beta1ContractsByCode
+      operationId: CosmwasmWasmV1ContractsByCode
       responses:
         '200':
           description: A successful response.
@@ -11131,7 +10910,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -11189,12 +10968,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -11360,10 +11134,280 @@ paths:
           type: boolean
       tags:
         - Query
-  '/wasm/v1beta1/contract/{address}':
+  /cosmwasm/wasm/v1/codes/pinned:
+    get:
+      summary: PinnedCodes gets the pinned code ids
+      operationId: CosmwasmWasmV1PinnedCodes
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              codeIds:
+                type: array
+                items:
+                  type: string
+                  format: uint64
+              pagination:
+                description: pagination defines the pagination in the response.
+                type: object
+                properties:
+                  nextKey:
+                    type: string
+                    format: byte
+                    title: |-
+                      next_key is the key to be passed to PageRequest.key to
+                      query the next page most efficiently
+                  total:
+                    type: string
+                    format: uint64
+                    title: >-
+                      total is total number of results available if
+                      PageRequest.count_total
+
+                      was set, its value is undefined otherwise
+            title: |-
+              QueryPinnedCodesResponse is the response type for the
+              Query/PinnedCodes RPC method
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                      description: >-
+                        A URL/resource name that uniquely identifies the type of
+                        the serialized
+
+                        protocol buffer message. This string must contain at
+                        least
+
+                        one "/" character. The last segment of the URL's path
+                        must represent
+
+                        the fully qualified name of the type (as in
+
+                        `path/google.protobuf.Duration`). The name should be in
+                        a canonical form
+
+                        (e.g., leading "." is not accepted).
+
+
+                        In practice, teams usually precompile into the binary
+                        all types that they
+
+                        expect it to use in the context of Any. However, for
+                        URLs which use the
+
+                        scheme `http`, `https`, or no scheme, one can optionally
+                        set up a type
+
+                        server that maps type URLs to message definitions as
+                        follows:
+
+
+                        * If no scheme is provided, `https` is assumed.
+
+                        * An HTTP GET on the URL must yield a
+                        [google.protobuf.Type][]
+                          value in binary format, or produce an error.
+                        * Applications are allowed to cache lookup results based
+                        on the
+                          URL, or have them precompiled into a binary to avoid any
+                          lookup. Therefore, binary compatibility needs to be preserved
+                          on changes to types. (Use versioned type names to manage
+                          breaking changes.)
+
+                        Note: this functionality is not currently available in
+                        the official
+
+                        protobuf release, and it is not used for type URLs
+                        beginning with
+
+                        type.googleapis.com.
+
+
+                        Schemes other than `http`, `https` (or the empty scheme)
+                        might be
+
+                        used with implementation specific semantics.
+                  additionalProperties: {}
+                  description: >-
+                    `Any` contains an arbitrary serialized protocol buffer
+                    message along with a
+
+                    URL that describes the type of the serialized message.
+
+
+                    Protobuf library provides support to pack/unpack Any values
+                    in the form
+
+                    of utility functions or additional generated methods of the
+                    Any type.
+
+
+                    Example 1: Pack and unpack a message in C++.
+
+                        Foo foo = ...;
+                        Any any;
+                        any.PackFrom(foo);
+                        ...
+                        if (any.UnpackTo(&foo)) {
+                          ...
+                        }
+
+                    Example 2: Pack and unpack a message in Java.
+
+                        Foo foo = ...;
+                        Any any = Any.pack(foo);
+                        ...
+                        if (any.is(Foo.class)) {
+                          foo = any.unpack(Foo.class);
+                        }
+
+                     Example 3: Pack and unpack a message in Python.
+
+                        foo = Foo(...)
+                        any = Any()
+                        any.Pack(foo)
+                        ...
+                        if any.Is(Foo.DESCRIPTOR):
+                          any.Unpack(foo)
+                          ...
+
+                     Example 4: Pack and unpack a message in Go
+
+                         foo := &pb.Foo{...}
+                         any, err := anypb.New(foo)
+                         if err != nil {
+                           ...
+                         }
+                         ...
+                         foo := &pb.Foo{}
+                         if err := any.UnmarshalTo(foo); err != nil {
+                           ...
+                         }
+
+                    The pack methods provided by protobuf library will by
+                    default use
+
+                    'type.googleapis.com/full.type.name' as the type URL and the
+                    unpack
+
+                    methods only use the fully qualified type name after the
+                    last '/'
+
+                    in the type URL, for example "foo.bar.com/x/y.z" will yield
+                    type
+
+                    name "y.z".
+
+
+
+                    JSON
+
+                    ====
+
+                    The JSON representation of an `Any` value uses the regular
+
+                    representation of the deserialized, embedded message, with
+                    an
+
+                    additional field `@type` which contains the type URL.
+                    Example:
+
+                        package google.profile;
+                        message Person {
+                          string first_name = 1;
+                          string last_name = 2;
+                        }
+
+                        {
+                          "@type": "type.googleapis.com/google.profile.Person",
+                          "firstName": <string>,
+                          "lastName": <string>
+                        }
+
+                    If the embedded message type is well-known and has a custom
+                    JSON
+
+                    representation, that representation will be embedded adding
+                    a field
+
+                    `value` which holds the custom JSON in addition to the
+                    `@type`
+
+                    field. Example (for message [google.protobuf.Duration][]):
+
+                        {
+                          "@type": "type.googleapis.com/google.protobuf.Duration",
+                          "value": "1.212s"
+                        }
+      parameters:
+        - name: pagination.key
+          description: |-
+            key is a value returned in PageResponse.next_key to begin
+            querying the next page most efficiently. Only one of offset or key
+            should be set.
+          in: query
+          required: false
+          type: string
+          format: byte
+        - name: pagination.offset
+          description: >-
+            offset is a numeric offset that can be used when key is unavailable.
+
+            It is less efficient than using key. Only one of offset or key
+            should
+
+            be set.
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: pagination.limit
+          description: >-
+            limit is the total number of results to be returned in the result
+            page.
+
+            If left empty it will default to a value to be set by each app.
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: pagination.countTotal
+          description: >-
+            count_total is set to true  to indicate that the result set should
+            include
+
+            a count of the total number of items available for pagination in
+            UIs.
+
+            count_total is only respected when offset is used. It is ignored
+            when key
+
+            is set.
+          in: query
+          required: false
+          type: boolean
+      tags:
+        - Query
+  '/cosmwasm/wasm/v1/contract/{address}':
     get:
       summary: ContractInfo gets the contract meta data
-      operationId: CosmwasmWasmV1Beta1ContractInfo
+      operationId: CosmwasmWasmV1ContractInfo
       responses:
         '200':
           description: A successful response.
@@ -11423,7 +11467,7 @@ paths:
                   extension:
                     type: object
                     properties:
-                      typeUrl:
+                      '@type':
                         type: string
                         description: >-
                           A URL/resource name that uniquely identifies the type
@@ -11481,12 +11525,7 @@ paths:
                           scheme) might be
 
                           used with implementation specific semantics.
-                      value:
-                        type: string
-                        format: byte
-                        description: >-
-                          Must be a valid serialized protocol buffer of the
-                          above specified type.
+                    additionalProperties: {}
                     description: >-
                       `Any` contains an arbitrary serialized protocol buffer
                       message along with a
@@ -11619,7 +11658,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -11677,12 +11716,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -11802,10 +11836,10 @@ paths:
           type: string
       tags:
         - Query
-  '/wasm/v1beta1/contract/{address}/history':
+  '/cosmwasm/wasm/v1/contract/{address}/history':
     get:
       summary: ContractHistory gets the contract code history
-      operationId: CosmwasmWasmV1Beta1ContractHistory
+      operationId: CosmwasmWasmV1ContractHistory
       responses:
         '200':
           description: A successful response.
@@ -11895,7 +11929,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -11953,12 +11987,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -12124,23 +12153,51 @@ paths:
           type: boolean
       tags:
         - Query
-  '/wasm/v1beta1/contract/{address}/raw/{queryData}':
+  '/cosmwasm/wasm/v1/contract/{address}/state':
     get:
-      summary: RawContractState gets single key from the raw store data of a contract
-      operationId: CosmwasmWasmV1Beta1RawContractState
+      summary: AllContractState gets all raw store data for a single contract
+      operationId: CosmwasmWasmV1AllContractState
       responses:
         '200':
           description: A successful response.
           schema:
             type: object
             properties:
-              data:
-                type: string
-                format: byte
-                title: Data contains the raw store data
+              models:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    key:
+                      type: string
+                      format: byte
+                      title: hex-encode key to read it better (this is often ascii)
+                    value:
+                      type: string
+                      format: byte
+                      title: base64-encode raw value
+                  title: Model is a struct that holds a KV pair
+              pagination:
+                description: pagination defines the pagination in the response.
+                type: object
+                properties:
+                  nextKey:
+                    type: string
+                    format: byte
+                    title: |-
+                      next_key is the key to be passed to PageRequest.key to
+                      query the next page most efficiently
+                  total:
+                    type: string
+                    format: uint64
+                    title: >-
+                      total is total number of results available if
+                      PageRequest.count_total
+
+                      was set, its value is undefined otherwise
             title: |-
-              QueryRawContractStateResponse is the response type for the
-              Query/RawContractState RPC method
+              QueryAllContractStateResponse is the response type for the
+              Query/AllContractState RPC method
         default:
           description: An unexpected error response.
           schema:
@@ -12156,7 +12213,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -12214,12 +12271,263 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
+                  additionalProperties: {}
+                  description: >-
+                    `Any` contains an arbitrary serialized protocol buffer
+                    message along with a
+
+                    URL that describes the type of the serialized message.
+
+
+                    Protobuf library provides support to pack/unpack Any values
+                    in the form
+
+                    of utility functions or additional generated methods of the
+                    Any type.
+
+
+                    Example 1: Pack and unpack a message in C++.
+
+                        Foo foo = ...;
+                        Any any;
+                        any.PackFrom(foo);
+                        ...
+                        if (any.UnpackTo(&foo)) {
+                          ...
+                        }
+
+                    Example 2: Pack and unpack a message in Java.
+
+                        Foo foo = ...;
+                        Any any = Any.pack(foo);
+                        ...
+                        if (any.is(Foo.class)) {
+                          foo = any.unpack(Foo.class);
+                        }
+
+                     Example 3: Pack and unpack a message in Python.
+
+                        foo = Foo(...)
+                        any = Any()
+                        any.Pack(foo)
+                        ...
+                        if any.Is(Foo.DESCRIPTOR):
+                          any.Unpack(foo)
+                          ...
+
+                     Example 4: Pack and unpack a message in Go
+
+                         foo := &pb.Foo{...}
+                         any, err := anypb.New(foo)
+                         if err != nil {
+                           ...
+                         }
+                         ...
+                         foo := &pb.Foo{}
+                         if err := any.UnmarshalTo(foo); err != nil {
+                           ...
+                         }
+
+                    The pack methods provided by protobuf library will by
+                    default use
+
+                    'type.googleapis.com/full.type.name' as the type URL and the
+                    unpack
+
+                    methods only use the fully qualified type name after the
+                    last '/'
+
+                    in the type URL, for example "foo.bar.com/x/y.z" will yield
+                    type
+
+                    name "y.z".
+
+
+
+                    JSON
+
+                    ====
+
+                    The JSON representation of an `Any` value uses the regular
+
+                    representation of the deserialized, embedded message, with
+                    an
+
+                    additional field `@type` which contains the type URL.
+                    Example:
+
+                        package google.profile;
+                        message Person {
+                          string first_name = 1;
+                          string last_name = 2;
+                        }
+
+                        {
+                          "@type": "type.googleapis.com/google.profile.Person",
+                          "firstName": <string>,
+                          "lastName": <string>
+                        }
+
+                    If the embedded message type is well-known and has a custom
+                    JSON
+
+                    representation, that representation will be embedded adding
+                    a field
+
+                    `value` which holds the custom JSON in addition to the
+                    `@type`
+
+                    field. Example (for message [google.protobuf.Duration][]):
+
+                        {
+                          "@type": "type.googleapis.com/google.protobuf.Duration",
+                          "value": "1.212s"
+                        }
+      parameters:
+        - name: address
+          description: address is the address of the contract
+          in: path
+          required: true
+          type: string
+        - name: pagination.key
+          description: |-
+            key is a value returned in PageResponse.next_key to begin
+            querying the next page most efficiently. Only one of offset or key
+            should be set.
+          in: query
+          required: false
+          type: string
+          format: byte
+        - name: pagination.offset
+          description: >-
+            offset is a numeric offset that can be used when key is unavailable.
+
+            It is less efficient than using key. Only one of offset or key
+            should
+
+            be set.
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: pagination.limit
+          description: >-
+            limit is the total number of results to be returned in the result
+            page.
+
+            If left empty it will default to a value to be set by each app.
+          in: query
+          required: false
+          type: string
+          format: uint64
+        - name: pagination.countTotal
+          description: >-
+            count_total is set to true  to indicate that the result set should
+            include
+
+            a count of the total number of items available for pagination in
+            UIs.
+
+            count_total is only respected when offset is used. It is ignored
+            when key
+
+            is set.
+          in: query
+          required: false
+          type: boolean
+      tags:
+        - Query
+  '/wasm/v1/contract/{address}/raw/{queryData}':
+    get:
+      summary: RawContractState gets single key from the raw store data of a contract
+      operationId: CosmwasmWasmV1RawContractState
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              data:
+                type: string
+                format: byte
+                title: Data contains the raw store data
+            title: |-
+              QueryRawContractStateResponse is the response type for the
+              Query/RawContractState RPC method
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
                       type: string
-                      format: byte
                       description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                        A URL/resource name that uniquely identifies the type of
+                        the serialized
+
+                        protocol buffer message. This string must contain at
+                        least
+
+                        one "/" character. The last segment of the URL's path
+                        must represent
+
+                        the fully qualified name of the type (as in
+
+                        `path/google.protobuf.Duration`). The name should be in
+                        a canonical form
+
+                        (e.g., leading "." is not accepted).
+
+
+                        In practice, teams usually precompile into the binary
+                        all types that they
+
+                        expect it to use in the context of Any. However, for
+                        URLs which use the
+
+                        scheme `http`, `https`, or no scheme, one can optionally
+                        set up a type
+
+                        server that maps type URLs to message definitions as
+                        follows:
+
+
+                        * If no scheme is provided, `https` is assumed.
+
+                        * An HTTP GET on the URL must yield a
+                        [google.protobuf.Type][]
+                          value in binary format, or produce an error.
+                        * Applications are allowed to cache lookup results based
+                        on the
+                          URL, or have them precompiled into a binary to avoid any
+                          lookup. Therefore, binary compatibility needs to be preserved
+                          on changes to types. (Use versioned type names to manage
+                          breaking changes.)
+
+                        Note: this functionality is not currently available in
+                        the official
+
+                        protobuf release, and it is not used for type URLs
+                        beginning with
+
+                        type.googleapis.com.
+
+
+                        Schemes other than `http`, `https` (or the empty scheme)
+                        might be
+
+                        used with implementation specific semantics.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -12344,10 +12652,10 @@ paths:
           format: byte
       tags:
         - Query
-  '/wasm/v1beta1/contract/{address}/smart/{queryData}':
+  '/wasm/v1/contract/{address}/smart/{queryData}':
     get:
       summary: SmartContractState get smart query result from the contract
-      operationId: CosmwasmWasmV1Beta1SmartContractState
+      operationId: CosmwasmWasmV1SmartContractState
       responses:
         '200':
           description: A successful response.
@@ -12376,7 +12684,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -12434,12 +12742,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -12565,295 +12868,6 @@ paths:
           format: byte
       tags:
         - Query
-  '/wasm/v1beta1/contract/{address}/state':
-    get:
-      summary: AllContractState gets all raw store data for a single contract
-      operationId: CosmwasmWasmV1Beta1AllContractState
-      responses:
-        '200':
-          description: A successful response.
-          schema:
-            type: object
-            properties:
-              models:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    key:
-                      type: string
-                      format: byte
-                      title: hex-encode key to read it better (this is often ascii)
-                    value:
-                      type: string
-                      format: byte
-                      title: base64-encode raw value
-                  title: Model is a struct that holds a KV pair
-              pagination:
-                description: pagination defines the pagination in the response.
-                type: object
-                properties:
-                  nextKey:
-                    type: string
-                    format: byte
-                    title: |-
-                      next_key is the key to be passed to PageRequest.key to
-                      query the next page most efficiently
-                  total:
-                    type: string
-                    format: uint64
-                    title: >-
-                      total is total number of results available if
-                      PageRequest.count_total
-
-                      was set, its value is undefined otherwise
-            title: |-
-              QueryAllContractStateResponse is the response type for the
-              Query/AllContractState RPC method
-        default:
-          description: An unexpected error response.
-          schema:
-            type: object
-            properties:
-              code:
-                type: integer
-                format: int32
-              message:
-                type: string
-              details:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    typeUrl:
-                      type: string
-                      description: >-
-                        A URL/resource name that uniquely identifies the type of
-                        the serialized
-
-                        protocol buffer message. This string must contain at
-                        least
-
-                        one "/" character. The last segment of the URL's path
-                        must represent
-
-                        the fully qualified name of the type (as in
-
-                        `path/google.protobuf.Duration`). The name should be in
-                        a canonical form
-
-                        (e.g., leading "." is not accepted).
-
-
-                        In practice, teams usually precompile into the binary
-                        all types that they
-
-                        expect it to use in the context of Any. However, for
-                        URLs which use the
-
-                        scheme `http`, `https`, or no scheme, one can optionally
-                        set up a type
-
-                        server that maps type URLs to message definitions as
-                        follows:
-
-
-                        * If no scheme is provided, `https` is assumed.
-
-                        * An HTTP GET on the URL must yield a
-                        [google.protobuf.Type][]
-                          value in binary format, or produce an error.
-                        * Applications are allowed to cache lookup results based
-                        on the
-                          URL, or have them precompiled into a binary to avoid any
-                          lookup. Therefore, binary compatibility needs to be preserved
-                          on changes to types. (Use versioned type names to manage
-                          breaking changes.)
-
-                        Note: this functionality is not currently available in
-                        the official
-
-                        protobuf release, and it is not used for type URLs
-                        beginning with
-
-                        type.googleapis.com.
-
-
-                        Schemes other than `http`, `https` (or the empty scheme)
-                        might be
-
-                        used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
-                  description: >-
-                    `Any` contains an arbitrary serialized protocol buffer
-                    message along with a
-
-                    URL that describes the type of the serialized message.
-
-
-                    Protobuf library provides support to pack/unpack Any values
-                    in the form
-
-                    of utility functions or additional generated methods of the
-                    Any type.
-
-
-                    Example 1: Pack and unpack a message in C++.
-
-                        Foo foo = ...;
-                        Any any;
-                        any.PackFrom(foo);
-                        ...
-                        if (any.UnpackTo(&foo)) {
-                          ...
-                        }
-
-                    Example 2: Pack and unpack a message in Java.
-
-                        Foo foo = ...;
-                        Any any = Any.pack(foo);
-                        ...
-                        if (any.is(Foo.class)) {
-                          foo = any.unpack(Foo.class);
-                        }
-
-                     Example 3: Pack and unpack a message in Python.
-
-                        foo = Foo(...)
-                        any = Any()
-                        any.Pack(foo)
-                        ...
-                        if any.Is(Foo.DESCRIPTOR):
-                          any.Unpack(foo)
-                          ...
-
-                     Example 4: Pack and unpack a message in Go
-
-                         foo := &pb.Foo{...}
-                         any, err := anypb.New(foo)
-                         if err != nil {
-                           ...
-                         }
-                         ...
-                         foo := &pb.Foo{}
-                         if err := any.UnmarshalTo(foo); err != nil {
-                           ...
-                         }
-
-                    The pack methods provided by protobuf library will by
-                    default use
-
-                    'type.googleapis.com/full.type.name' as the type URL and the
-                    unpack
-
-                    methods only use the fully qualified type name after the
-                    last '/'
-
-                    in the type URL, for example "foo.bar.com/x/y.z" will yield
-                    type
-
-                    name "y.z".
-
-
-
-                    JSON
-
-                    ====
-
-                    The JSON representation of an `Any` value uses the regular
-
-                    representation of the deserialized, embedded message, with
-                    an
-
-                    additional field `@type` which contains the type URL.
-                    Example:
-
-                        package google.profile;
-                        message Person {
-                          string first_name = 1;
-                          string last_name = 2;
-                        }
-
-                        {
-                          "@type": "type.googleapis.com/google.profile.Person",
-                          "firstName": <string>,
-                          "lastName": <string>
-                        }
-
-                    If the embedded message type is well-known and has a custom
-                    JSON
-
-                    representation, that representation will be embedded adding
-                    a field
-
-                    `value` which holds the custom JSON in addition to the
-                    `@type`
-
-                    field. Example (for message [google.protobuf.Duration][]):
-
-                        {
-                          "@type": "type.googleapis.com/google.protobuf.Duration",
-                          "value": "1.212s"
-                        }
-      parameters:
-        - name: address
-          description: address is the address of the contract
-          in: path
-          required: true
-          type: string
-        - name: pagination.key
-          description: |-
-            key is a value returned in PageResponse.next_key to begin
-            querying the next page most efficiently. Only one of offset or key
-            should be set.
-          in: query
-          required: false
-          type: string
-          format: byte
-        - name: pagination.offset
-          description: >-
-            offset is a numeric offset that can be used when key is unavailable.
-
-            It is less efficient than using key. Only one of offset or key
-            should
-
-            be set.
-          in: query
-          required: false
-          type: string
-          format: uint64
-        - name: pagination.limit
-          description: >-
-            limit is the total number of results to be returned in the result
-            page.
-
-            If left empty it will default to a value to be set by each app.
-          in: query
-          required: false
-          type: string
-          format: uint64
-        - name: pagination.countTotal
-          description: >-
-            count_total is set to true  to indicate that the result set should
-            include
-
-            a count of the total number of items available for pagination in
-            UIs.
-
-            count_total is only respected when offset is used. It is ignored
-            when key
-
-            is set.
-          in: query
-          required: false
-          type: boolean
-      tags:
-        - Query
   /ibc/applications/transfer/v1beta1/denom_traces:
     get:
       summary: DenomTraces queries all denomination traces.
@@ -12923,7 +12937,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -12981,12 +12995,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -13195,7 +13204,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -13253,12 +13262,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -13424,7 +13428,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -13482,12 +13486,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -13764,7 +13763,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -13822,12 +13821,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -14126,7 +14120,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -14184,12 +14178,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -14338,7 +14327,7 @@ paths:
                   clientState:
                     type: object
                     properties:
-                      typeUrl:
+                      '@type':
                         type: string
                         description: >-
                           A URL/resource name that uniquely identifies the type
@@ -14396,12 +14385,7 @@ paths:
                           scheme) might be
 
                           used with implementation specific semantics.
-                      value:
-                        type: string
-                        format: byte
-                        description: >-
-                          Must be a valid serialized protocol buffer of the
-                          above specified type.
+                    additionalProperties: {}
                     description: >-
                       `Any` contains an arbitrary serialized protocol buffer
                       message along with a
@@ -14568,7 +14552,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -14626,12 +14610,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -14771,7 +14750,7 @@ paths:
               consensusState:
                 type: object
                 properties:
-                  typeUrl:
+                  '@type':
                     type: string
                     description: >-
                       A URL/resource name that uniquely identifies the type of
@@ -14828,12 +14807,7 @@ paths:
                       might be
 
                       used with implementation specific semantics.
-                  value:
-                    type: string
-                    format: byte
-                    description: >-
-                      Must be a valid serialized protocol buffer of the above
-                      specified type.
+                additionalProperties: {}
                 description: >-
                   `Any` contains an arbitrary serialized protocol buffer message
                   along with a
@@ -14995,7 +14969,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -15053,12 +15027,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -15260,7 +15229,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -15318,12 +15287,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -15564,7 +15528,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -15622,12 +15586,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -15865,7 +15824,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -15923,12 +15882,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -16173,7 +16127,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -16231,12 +16185,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -16472,7 +16421,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -16530,12 +16479,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -16735,7 +16679,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -16793,12 +16737,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -17001,7 +16940,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -17059,12 +16998,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -17264,7 +17198,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -17322,12 +17256,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -17623,7 +17552,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -17681,12 +17610,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -17891,7 +17815,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -17949,12 +17873,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -18089,7 +18008,7 @@ paths:
                     clientState:
                       type: object
                       properties:
-                        typeUrl:
+                        '@type':
                           type: string
                           description: >-
                             A URL/resource name that uniquely identifies the
@@ -18147,12 +18066,7 @@ paths:
                             scheme) might be
 
                             used with implementation specific semantics.
-                        value:
-                          type: string
-                          format: byte
-                          description: >-
-                            Must be a valid serialized protocol buffer of the
-                            above specified type.
+                      additionalProperties: {}
                       description: >-
                         `Any` contains an arbitrary serialized protocol buffer
                         message along with a
@@ -18321,7 +18235,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -18379,12 +18293,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -18558,7 +18467,7 @@ paths:
               clientState:
                 type: object
                 properties:
-                  typeUrl:
+                  '@type':
                     type: string
                     description: >-
                       A URL/resource name that uniquely identifies the type of
@@ -18615,12 +18524,7 @@ paths:
                       might be
 
                       used with implementation specific semantics.
-                  value:
-                    type: string
-                    format: byte
-                    description: >-
-                      Must be a valid serialized protocol buffer of the above
-                      specified type.
+                additionalProperties: {}
                 description: >-
                   `Any` contains an arbitrary serialized protocol buffer message
                   along with a
@@ -18784,7 +18688,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -18842,12 +18746,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -19014,7 +18913,7 @@ paths:
                     consensusState:
                       type: object
                       properties:
-                        typeUrl:
+                        '@type':
                           type: string
                           description: >-
                             A URL/resource name that uniquely identifies the
@@ -19072,12 +18971,7 @@ paths:
                             scheme) might be
 
                             used with implementation specific semantics.
-                        value:
-                          type: string
-                          format: byte
-                          description: >-
-                            Must be a valid serialized protocol buffer of the
-                            above specified type.
+                      additionalProperties: {}
                       description: >-
                         `Any` contains an arbitrary serialized protocol buffer
                         message along with a
@@ -19242,7 +19136,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -19300,12 +19194,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -19488,7 +19377,7 @@ paths:
               consensusState:
                 type: object
                 properties:
-                  typeUrl:
+                  '@type':
                     type: string
                     description: >-
                       A URL/resource name that uniquely identifies the type of
@@ -19545,12 +19434,7 @@ paths:
                       might be
 
                       used with implementation specific semantics.
-                  value:
-                    type: string
-                    format: byte
-                    description: >-
-                      Must be a valid serialized protocol buffer of the above
-                      specified type.
+                additionalProperties: {}
                 description: >-
                   `Any` contains an arbitrary serialized protocol buffer message
                   along with a
@@ -19713,7 +19597,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -19771,12 +19655,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -19983,7 +19862,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -20041,12 +19920,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -20338,7 +20212,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -20396,12 +20270,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -20717,7 +20586,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -20775,12 +20644,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -20922,7 +20786,7 @@ paths:
                   clientState:
                     type: object
                     properties:
-                      typeUrl:
+                      '@type':
                         type: string
                         description: >-
                           A URL/resource name that uniquely identifies the type
@@ -20980,12 +20844,7 @@ paths:
                           scheme) might be
 
                           used with implementation specific semantics.
-                      value:
-                        type: string
-                        format: byte
-                        description: >-
-                          Must be a valid serialized protocol buffer of the
-                          above specified type.
+                    additionalProperties: {}
                     description: >-
                       `Any` contains an arbitrary serialized protocol buffer
                       message along with a
@@ -21152,7 +21011,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -21210,12 +21069,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -21350,7 +21204,7 @@ paths:
               consensusState:
                 type: object
                 properties:
-                  typeUrl:
+                  '@type':
                     type: string
                     description: >-
                       A URL/resource name that uniquely identifies the type of
@@ -21407,12 +21261,7 @@ paths:
                       might be
 
                       used with implementation specific semantics.
-                  value:
-                    type: string
-                    format: byte
-                    description: >-
-                      Must be a valid serialized protocol buffer of the above
-                      specified type.
+                additionalProperties: {}
                 description: >-
                   `Any` contains an arbitrary serialized protocol buffer message
                   along with a
@@ -21574,7 +21423,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -21632,12 +21481,7 @@ paths:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -22276,7 +22120,7 @@ definitions:
   google.protobuf.Any:
     type: object
     properties:
-      typeUrl:
+      '@type':
         type: string
         description: >-
           A URL/resource name that uniquely identifies the type of the
@@ -22325,12 +22169,7 @@ definitions:
           Schemes other than `http`, `https` (or the empty scheme) might be
 
           used with implementation specific semantics.
-      value:
-        type: string
-        format: byte
-        description: >-
-          Must be a valid serialized protocol buffer of the above specified
-          type.
+    additionalProperties: {}
     description: >-
       `Any` contains an arbitrary serialized protocol buffer message along with
       a
@@ -22444,7 +22283,7 @@ definitions:
         items:
           type: object
           properties:
-            typeUrl:
+            '@type':
               type: string
               description: >-
                 A URL/resource name that uniquely identifies the type of the
@@ -22498,12 +22337,7 @@ definitions:
                 be
 
                 used with implementation specific semantics.
-            value:
-              type: string
-              format: byte
-              description: >-
-                Must be a valid serialized protocol buffer of the above
-                specified type.
+          additionalProperties: {}
           description: >-
             `Any` contains an arbitrary serialized protocol buffer message along
             with a
@@ -22974,7 +22808,7 @@ definitions:
         items:
           type: object
           properties:
-            typeUrl:
+            '@type':
               type: string
               description: >-
                 A URL/resource name that uniquely identifies the type of the
@@ -23028,12 +22862,7 @@ definitions:
                 be
 
                 used with implementation specific semantics.
-            value:
-              type: string
-              format: byte
-              description: >-
-                Must be a valid serialized protocol buffer of the above
-                specified type.
+          additionalProperties: {}
           description: >-
             `Any` contains an arbitrary serialized protocol buffer message along
             with a
@@ -23166,7 +22995,7 @@ definitions:
       evidence:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -23218,12 +23047,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -23400,7 +23224,7 @@ definitions:
       content:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -23452,12 +23276,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -23811,7 +23630,7 @@ definitions:
           content:
             type: object
             properties:
-              typeUrl:
+              '@type':
                 type: string
                 description: >-
                   A URL/resource name that uniquely identifies the type of the
@@ -23866,12 +23685,7 @@ definitions:
                   be
 
                   used with implementation specific semantics.
-              value:
-                type: string
-                format: byte
-                description: >-
-                  Must be a valid serialized protocol buffer of the above
-                  specified type.
+            additionalProperties: {}
             description: >-
               `Any` contains an arbitrary serialized protocol buffer message
               along with a
@@ -24059,7 +23873,7 @@ definitions:
             content:
               type: object
               properties:
-                typeUrl:
+                '@type':
                   type: string
                   description: >-
                     A URL/resource name that uniquely identifies the type of the
@@ -24116,12 +23930,7 @@ definitions:
                     might be
 
                     used with implementation specific semantics.
-                value:
-                  type: string
-                  format: byte
-                  description: >-
-                    Must be a valid serialized protocol buffer of the above
-                    specified type.
+              additionalProperties: {}
               description: >-
                 `Any` contains an arbitrary serialized protocol buffer message
                 along with a
@@ -24922,7 +24731,7 @@ definitions:
             consensusPubkey:
               type: object
               properties:
-                typeUrl:
+                '@type':
                   type: string
                   description: >-
                     A URL/resource name that uniquely identifies the type of the
@@ -24979,12 +24788,7 @@ definitions:
                     might be
 
                     used with implementation specific semantics.
-                value:
-                  type: string
-                  format: byte
-                  description: >-
-                    Must be a valid serialized protocol buffer of the above
-                    specified type.
+              additionalProperties: {}
               description: >-
                 `Any` contains an arbitrary serialized protocol buffer message
                 along with a
@@ -25486,7 +25290,7 @@ definitions:
           consensusPubkey:
             type: object
             properties:
-              typeUrl:
+              '@type':
                 type: string
                 description: >-
                   A URL/resource name that uniquely identifies the type of the
@@ -25541,12 +25345,7 @@ definitions:
                   be
 
                   used with implementation specific semantics.
-              value:
-                type: string
-                format: byte
-                description: >-
-                  Must be a valid serialized protocol buffer of the above
-                  specified type.
+            additionalProperties: {}
             description: >-
               `Any` contains an arbitrary serialized protocol buffer message
               along with a
@@ -25782,7 +25581,7 @@ definitions:
             consensusPubkey:
               type: object
               properties:
-                typeUrl:
+                '@type':
                   type: string
                   description: >-
                     A URL/resource name that uniquely identifies the type of the
@@ -25839,12 +25638,7 @@ definitions:
                     might be
 
                     used with implementation specific semantics.
-                value:
-                  type: string
-                  format: byte
-                  description: >-
-                    Must be a valid serialized protocol buffer of the above
-                    specified type.
+              additionalProperties: {}
               description: >-
                 `Any` contains an arbitrary serialized protocol buffer message
                 along with a
@@ -26184,7 +25978,7 @@ definitions:
                 consensusPubkey:
                   type: object
                   properties:
-                    typeUrl:
+                    '@type':
                       type: string
                       description: >-
                         A URL/resource name that uniquely identifies the type of
@@ -26242,12 +26036,7 @@ definitions:
                         might be
 
                         used with implementation specific semantics.
-                    value:
-                      type: string
-                      format: byte
-                      description: >-
-                        Must be a valid serialized protocol buffer of the above
-                        specified type.
+                  additionalProperties: {}
                   description: >-
                     `Any` contains an arbitrary serialized protocol buffer
                     message along with a
@@ -26790,7 +26579,7 @@ definitions:
           consensusPubkey:
             type: object
             properties:
-              typeUrl:
+              '@type':
                 type: string
                 description: >-
                   A URL/resource name that uniquely identifies the type of the
@@ -26845,12 +26634,7 @@ definitions:
                   be
 
                   used with implementation specific semantics.
-              value:
-                type: string
-                format: byte
-                description: >-
-                  Must be a valid serialized protocol buffer of the above
-                  specified type.
+            additionalProperties: {}
             description: >-
               `Any` contains an arbitrary serialized protocol buffer message
               along with a
@@ -27155,7 +26939,7 @@ definitions:
             consensusPubkey:
               type: object
               properties:
-                typeUrl:
+                '@type':
                   type: string
                   description: >-
                     A URL/resource name that uniquely identifies the type of the
@@ -27212,12 +26996,7 @@ definitions:
                     might be
 
                     used with implementation specific semantics.
-                value:
-                  type: string
-                  format: byte
-                  description: >-
-                    Must be a valid serialized protocol buffer of the above
-                    specified type.
+              additionalProperties: {}
               description: >-
                 `Any` contains an arbitrary serialized protocol buffer message
                 along with a
@@ -27746,7 +27525,7 @@ definitions:
       consensusPubkey:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -27798,12 +27577,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -28140,7 +27914,7 @@ definitions:
     description: >-
       MsgCreateVestingAccountResponse defines the Msg/CreateVestingAccount
       response type.
-  cosmwasm.wasm.v1beta1.AbsoluteTxPosition:
+  cosmwasm.wasm.v1.AbsoluteTxPosition:
     type: object
     properties:
       blockHeight:
@@ -28158,7 +27932,7 @@ definitions:
     description: |-
       AbsoluteTxPosition is a unique transaction position that allows for global
       ordering of transactions.
-  cosmwasm.wasm.v1beta1.AccessConfig:
+  cosmwasm.wasm.v1.AccessConfig:
     type: object
     properties:
       permission:
@@ -28179,7 +27953,7 @@ definitions:
       address:
         type: string
     description: AccessConfig access control type.
-  cosmwasm.wasm.v1beta1.AccessType:
+  cosmwasm.wasm.v1.AccessType:
     type: string
     enum:
       - ACCESS_TYPE_UNSPECIFIED
@@ -28194,7 +27968,7 @@ definitions:
        - ACCESS_TYPE_ONLY_ADDRESS: AccessTypeOnlyAddress restricted to an address
        - ACCESS_TYPE_EVERYBODY: AccessTypeEverybody unrestricted
     title: AccessType permission types
-  cosmwasm.wasm.v1beta1.CodeInfoResponse:
+  cosmwasm.wasm.v1.CodeInfoResponse:
     type: object
     properties:
       codeId:
@@ -28205,12 +27979,8 @@ definitions:
       dataHash:
         type: string
         format: byte
-      source:
-        type: string
-      builder:
-        type: string
     title: CodeInfoResponse contains code meta data from CodeInfo
-  cosmwasm.wasm.v1beta1.ContractCodeHistoryEntry:
+  cosmwasm.wasm.v1.ContractCodeHistoryEntry:
     type: object
     properties:
       operation:
@@ -28253,7 +28023,7 @@ definitions:
         type: string
         format: byte
     description: ContractCodeHistoryEntry metadata to a contract.
-  cosmwasm.wasm.v1beta1.ContractCodeHistoryOperationType:
+  cosmwasm.wasm.v1.ContractCodeHistoryOperationType:
     type: string
     enum:
       - CONTRACT_CODE_HISTORY_OPERATION_TYPE_UNSPECIFIED
@@ -28268,7 +28038,7 @@ definitions:
        - CONTRACT_CODE_HISTORY_OPERATION_TYPE_MIGRATE: ContractCodeHistoryOperationTypeMigrate code migration
        - CONTRACT_CODE_HISTORY_OPERATION_TYPE_GENESIS: ContractCodeHistoryOperationTypeGenesis based on genesis data
     title: ContractCodeHistoryOperationType actions that caused a code change
-  cosmwasm.wasm.v1beta1.ContractInfo:
+  cosmwasm.wasm.v1.ContractInfo:
     type: object
     properties:
       codeId:
@@ -28316,7 +28086,7 @@ definitions:
       extension:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -28368,12 +28138,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -28476,7 +28241,7 @@ definitions:
                 "value": "1.212s"
               }
     title: ContractInfo stores a WASM contract instance
-  cosmwasm.wasm.v1beta1.Model:
+  cosmwasm.wasm.v1.Model:
     type: object
     properties:
       key:
@@ -28488,10 +28253,10 @@ definitions:
         format: byte
         title: base64-encode raw value
     title: Model is a struct that holds a KV pair
-  cosmwasm.wasm.v1beta1.MsgClearAdminResponse:
+  cosmwasm.wasm.v1.MsgClearAdminResponse:
     type: object
     title: MsgClearAdminResponse returns empty data
-  cosmwasm.wasm.v1beta1.MsgExecuteContractResponse:
+  cosmwasm.wasm.v1.MsgExecuteContractResponse:
     type: object
     properties:
       data:
@@ -28499,7 +28264,7 @@ definitions:
         format: byte
         title: Data contains base64-encoded bytes to returned from the contract
     description: MsgExecuteContractResponse returns execution result data.
-  cosmwasm.wasm.v1beta1.MsgInstantiateContractResponse:
+  cosmwasm.wasm.v1.MsgInstantiateContractResponse:
     type: object
     properties:
       address:
@@ -28510,7 +28275,7 @@ definitions:
         format: byte
         title: Data contains base64-encoded bytes to returned from the contract
     title: MsgInstantiateContractResponse return instantiation result data
-  cosmwasm.wasm.v1beta1.MsgMigrateContractResponse:
+  cosmwasm.wasm.v1.MsgMigrateContractResponse:
     type: object
     properties:
       data:
@@ -28520,7 +28285,7 @@ definitions:
           Data contains same raw bytes returned as data from the wasm contract.
           (May be empty)
     description: MsgMigrateContractResponse returns contract migration result data.
-  cosmwasm.wasm.v1beta1.MsgStoreCodeResponse:
+  cosmwasm.wasm.v1.MsgStoreCodeResponse:
     type: object
     properties:
       codeId:
@@ -28528,10 +28293,10 @@ definitions:
         format: uint64
         title: CodeID is the reference to the stored WASM code
     description: MsgStoreCodeResponse returns store result data.
-  cosmwasm.wasm.v1beta1.MsgUpdateAdminResponse:
+  cosmwasm.wasm.v1.MsgUpdateAdminResponse:
     type: object
     title: MsgUpdateAdminResponse returns empty data
-  cosmwasm.wasm.v1beta1.QueryAllContractStateResponse:
+  cosmwasm.wasm.v1.QueryAllContractStateResponse:
     type: object
     properties:
       models:
@@ -28569,7 +28334,7 @@ definitions:
     title: |-
       QueryAllContractStateResponse is the response type for the
       Query/AllContractState RPC method
-  cosmwasm.wasm.v1beta1.QueryCodeResponse:
+  cosmwasm.wasm.v1.QueryCodeResponse:
     type: object
     properties:
       codeInfo:
@@ -28583,16 +28348,12 @@ definitions:
           dataHash:
             type: string
             format: byte
-          source:
-            type: string
-          builder:
-            type: string
         title: CodeInfoResponse contains code meta data from CodeInfo
       data:
         type: string
         format: byte
     title: QueryCodeResponse is the response type for the Query/Code RPC method
-  cosmwasm.wasm.v1beta1.QueryCodesResponse:
+  cosmwasm.wasm.v1.QueryCodesResponse:
     type: object
     properties:
       codeInfos:
@@ -28608,10 +28369,6 @@ definitions:
             dataHash:
               type: string
               format: byte
-            source:
-              type: string
-            builder:
-              type: string
           title: CodeInfoResponse contains code meta data from CodeInfo
       pagination:
         description: pagination defines the pagination in the response.
@@ -28632,7 +28389,7 @@ definitions:
 
               was set, its value is undefined otherwise
     title: QueryCodesResponse is the response type for the Query/Codes RPC method
-  cosmwasm.wasm.v1beta1.QueryContractHistoryResponse:
+  cosmwasm.wasm.v1.QueryContractHistoryResponse:
     type: object
     properties:
       entries:
@@ -28703,7 +28460,7 @@ definitions:
     title: |-
       QueryContractHistoryResponse is the response type for the
       Query/ContractHistory RPC method
-  cosmwasm.wasm.v1beta1.QueryContractInfoResponse:
+  cosmwasm.wasm.v1.QueryContractInfoResponse:
     type: object
     properties:
       address:
@@ -28757,7 +28514,7 @@ definitions:
           extension:
             type: object
             properties:
-              typeUrl:
+              '@type':
                 type: string
                 description: >-
                   A URL/resource name that uniquely identifies the type of the
@@ -28812,12 +28569,7 @@ definitions:
                   be
 
                   used with implementation specific semantics.
-              value:
-                type: string
-                format: byte
-                description: >-
-                  Must be a valid serialized protocol buffer of the above
-                  specified type.
+            additionalProperties: {}
             description: >-
               `Any` contains an arbitrary serialized protocol buffer message
               along with a
@@ -28928,7 +28680,7 @@ definitions:
       RPC
 
       method
-  cosmwasm.wasm.v1beta1.QueryContractsByCodeResponse:
+  cosmwasm.wasm.v1.QueryContractsByCodeResponse:
     type: object
     properties:
       contracts:
@@ -28957,7 +28709,36 @@ definitions:
     title: |-
       QueryContractsByCodeResponse is the response type for the
       Query/ContractsByCode RPC method
-  cosmwasm.wasm.v1beta1.QueryRawContractStateResponse:
+  cosmwasm.wasm.v1.QueryPinnedCodesResponse:
+    type: object
+    properties:
+      codeIds:
+        type: array
+        items:
+          type: string
+          format: uint64
+      pagination:
+        description: pagination defines the pagination in the response.
+        type: object
+        properties:
+          nextKey:
+            type: string
+            format: byte
+            title: |-
+              next_key is the key to be passed to PageRequest.key to
+              query the next page most efficiently
+          total:
+            type: string
+            format: uint64
+            title: >-
+              total is total number of results available if
+              PageRequest.count_total
+
+              was set, its value is undefined otherwise
+    title: |-
+      QueryPinnedCodesResponse is the response type for the
+      Query/PinnedCodes RPC method
+  cosmwasm.wasm.v1.QueryRawContractStateResponse:
     type: object
     properties:
       data:
@@ -28967,7 +28748,7 @@ definitions:
     title: |-
       QueryRawContractStateResponse is the response type for the
       Query/RawContractState RPC method
-  cosmwasm.wasm.v1beta1.QuerySmartContractStateResponse:
+  cosmwasm.wasm.v1.QuerySmartContractStateResponse:
     type: object
     properties:
       data:
@@ -29436,7 +29217,7 @@ definitions:
           clientState:
             type: object
             properties:
-              typeUrl:
+              '@type':
                 type: string
                 description: >-
                   A URL/resource name that uniquely identifies the type of the
@@ -29491,12 +29272,7 @@ definitions:
                   be
 
                   used with implementation specific semantics.
-              value:
-                type: string
-                format: byte
-                description: >-
-                  Must be a valid serialized protocol buffer of the above
-                  specified type.
+            additionalProperties: {}
             description: >-
               `Any` contains an arbitrary serialized protocol buffer message
               along with a
@@ -29643,7 +29419,7 @@ definitions:
       consensusState:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -29695,12 +29471,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -30647,7 +30418,7 @@ definitions:
       clientState:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -30699,12 +30470,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -30841,7 +30607,7 @@ definitions:
       consensusState:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -30893,12 +30659,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -31048,7 +30809,7 @@ definitions:
       clientState:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -31100,12 +30861,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -31258,7 +31014,7 @@ definitions:
             clientState:
               type: object
               properties:
-                typeUrl:
+                '@type':
                   type: string
                   description: >-
                     A URL/resource name that uniquely identifies the type of the
@@ -31315,12 +31071,7 @@ definitions:
                     might be
 
                     used with implementation specific semantics.
-                value:
-                  type: string
-                  format: byte
-                  description: >-
-                    Must be a valid serialized protocol buffer of the above
-                    specified type.
+              additionalProperties: {}
               description: >-
                 `Any` contains an arbitrary serialized protocol buffer message
                 along with a
@@ -31471,7 +31222,7 @@ definitions:
       consensusState:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -31523,12 +31274,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a
@@ -31705,7 +31451,7 @@ definitions:
             consensusState:
               type: object
               properties:
-                typeUrl:
+                '@type':
                   type: string
                   description: >-
                     A URL/resource name that uniquely identifies the type of the
@@ -31762,12 +31508,7 @@ definitions:
                     might be
 
                     used with implementation specific semantics.
-                value:
-                  type: string
-                  format: byte
-                  description: >-
-                    Must be a valid serialized protocol buffer of the above
-                    specified type.
+              additionalProperties: {}
               description: >-
                 `Any` contains an arbitrary serialized protocol buffer message
                 along with a
@@ -32188,7 +31929,7 @@ definitions:
           clientState:
             type: object
             properties:
-              typeUrl:
+              '@type':
                 type: string
                 description: >-
                   A URL/resource name that uniquely identifies the type of the
@@ -32243,12 +31984,7 @@ definitions:
                   be
 
                   used with implementation specific semantics.
-              value:
-                type: string
-                format: byte
-                description: >-
-                  Must be a valid serialized protocol buffer of the above
-                  specified type.
+            additionalProperties: {}
             description: >-
               `Any` contains an arbitrary serialized protocol buffer message
               along with a
@@ -32395,7 +32131,7 @@ definitions:
       consensusState:
         type: object
         properties:
-          typeUrl:
+          '@type':
             type: string
             description: >-
               A URL/resource name that uniquely identifies the type of the
@@ -32447,12 +32183,7 @@ definitions:
               Schemes other than `http`, `https` (or the empty scheme) might be
 
               used with implementation specific semantics.
-          value:
-            type: string
-            format: byte
-            description: >-
-              Must be a valid serialized protocol buffer of the above specified
-              type.
+        additionalProperties: {}
         description: >-
           `Any` contains an arbitrary serialized protocol buffer message along
           with a

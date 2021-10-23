@@ -11,35 +11,13 @@ services:
       - 4500:4500
     restart: always
     environment: 
-      MONIKER: MY-AES-NODE-NAME-1
+      CHAIN_ID: "aeternalism"
+      MONIKER: "MY-AES-NODE-NAME-1"
+      APP_HOME: "/aeschain/.aeschain"
+      SEEDS_URL: "https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/seeds"
+      GENESIS_URL: "https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/genesis.json"
     volumes: 
       - aesdata1:/aeschain
-
-  # aeschain2:
-  #   build: .
-  #   ports:
-  #     - 36656:26656
-  #     - 36657:26657
-  #     - 9091:9090
-  #     - 4501:4500
-  #   restart: always
-  #   environment: 
-  #     MONIKER: MY-AES-NODE-NAME-2
-  #   volumes: 
-  #     - aesdata2:/aeschain
-
-  # aeschain3:
-  #   build: .
-  #   ports:
-  #     - 46656:26656
-  #     - 46657:26657
-  #     - 9092:9090
-  #     - 4502:4500
-  #   restart: always
-  #   environment: 
-  #     MONIKER: MY-AES-NODE-NAME-3
-  #   volumes: 
-  #     - aesdata3:/aeschain
 
 volumes:
   aesdata1:
@@ -48,16 +26,3 @@ volumes:
       type: 'none'
       o: 'bind'
       device: './.aesdata1'
-  # aesdata2:
-  #   driver: local
-  #   driver_opts: 
-  #     type: 'none'
-  #     o: 'bind'
-  #     device: './.aesdata2'
-  # aesdata3:
-  #   driver: local
-  #   driver_opts: 
-  #     type: 'none'
-  #     o: 'bind'
-  #     device: './.aesdata3'
-

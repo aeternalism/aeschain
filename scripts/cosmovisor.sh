@@ -1,6 +1,6 @@
 #!/bin/bash
 APP_BINARY="aeschaind"
-APP_HOME="${1:-$HOME/.aeschain}"
+APP_HOME=${1:-$HOME/.aeschain}
 
 # install cosmovisor
 cd $(go env GOPATH)
