@@ -1,8 +1,8 @@
 #!/bin/bash
 APP_BINARY="aeschaind"
 USER=${1:-$USER}
-APP_HOME="/home/${USER}/.aeschain"
-GOPATH="/home/${USER}/go"
+APP_HOME=${2:-$HOME/.aeschain}
+GOPATH=${3:-$(go env GOPATH)}
 
 # Must run with root shell
 cat > /etc/systemd/system/aes.service << EOF

@@ -1,9 +1,9 @@
 #!/bin/bash
-CHAIN_ID="aeternalism"
-MONIKER=$1
-APP_HOME=${2:-$HOME/.aeschain}
-SEEDS_URL=${3:-https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/testnet/seeds}
-GENESIS_URL=${4:-https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/testnet/genesis.json}
+CHAIN_ID=${1:-"aeternalism"}
+MONIKER=$2
+APP_HOME=${3:-$HOME/.aeschain}
+SEEDS_URL=${4:-https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/seeds}
+GENESIS_URL=${5:-https://raw.githubusercontent.com/aeternalism/aeschain-version/main/oxygen/genesis.json}
 
 # get seeds
 SEEDS=$(curl ${SEEDS_URL})
@@ -12,13 +12,13 @@ SEEDS=$(curl ${SEEDS_URL})
 GENESIS=${APP_HOME}/config/genesis.json
 if [ ! -f "$GENESIS" ]; then 
   # init chain
-  aeschaind init ${MONIKER} --chain-id ${CHAIN_ID} --home ${APP_HOME}
+  aeschaind init "${MONIKER}" --chain-id ${CHAIN_ID} --home ${APP_HOME}
 
   # override genesis
   curl ${GENESIS_URL} > ${APP_HOME}/config/genesis.json
 
   # validate genesis
-  aeschaind validate-genesis
+  aeschaind validate-genesis --home ${APP_HOME}
 
   # configure chain
   ## P2P
@@ -33,9 +33,8 @@ fi
 
 # run the node
 aeschaind start \
-  --moniker ${MONIKER} \
+  --moniker "${MONIKER}" \
   --consensus.create_empty_blocks false \
   --p2p.seeds ${SEEDS} \
-  --p2p.persistent_peers ${SEEDS} \
   --home ${APP_HOME}
   
