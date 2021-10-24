@@ -1,5 +1,6 @@
 #!/bin/bash
-USER="bryan"
+USER_EXEC=${1:-$USER}
+GO_BIN=${2:-$(go env GOPATH)/bin}
 
 # Must run with root shell
 cat > /etc/systemd/system/faucet.service << EOF
@@ -8,7 +9,7 @@ Description=Aeschain Faucet Service
 After=network-online.target
 
 [Service]
-User=${USER}
+User=${USER_EXEC}
 ExecStart=/usr/local/bin/faucet
 Restart=always
 RestartSec=3
@@ -23,7 +24,7 @@ Environment="DENOMS=uaes"
 Environment="CREDIT_AMOUNT=100000000"
 Environment="MAX_CREDIT=1000000000"
 Environment="SDK_VERSION=stargate"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/brian/go/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${GO_BIN}"
 
 [Install]
 WantedBy=multi-user.target
