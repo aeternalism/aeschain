@@ -1,33 +1,16 @@
 accounts:
-  - name: brian
-    coins: ["100000000000000uaes"]
-    mnemonic: "leave monitor recall inhale weather fire friend group wish wreck prefer safe army visit used suffer furnace napkin bronze truly myth tell sunny couple"
-  - name: validator001
-    coins: ["1000000000000uaes"]
-    mnemonic: "wish crane issue tennis material poem federal blur basket hold elite venture youth end whisper other strong super daring surprise range spoil demise mask"
-  - name: faucet
-    coins: ["1000000000000uaes"]
-    mnemonic: "century quick clarify below close wealth chronic story phone alert pitch cherry erupt crew meat morning hundred region prosper friend room place doctor picnic"
+  - name: alice
+    coins: ["20000token", "200000000stake"]
+  - name: bob
+    coins: ["10000token", "100000000stake"]
 validator:
-  name: validator001
-  staked: "1000000000000uaes"
+  name: alice
+  staked: "100000000stake"
 client:
   openapi:
     path: "docs/static/openapi.yml"
+  vuex:
+    path: "vue/src/store"
 faucet:
-  name: faucet
-  coins: ["100000uaes"]
-init:
-  home: "~/.aeschain"
-  keyring-backend: "file"
-  config:
-    moniker: "foundation-node-001"
-  app:
-build:
-  binary: "aeschaind"
-genesis:
-  chain_id: "aeternalism"
-  app_state:
-    staking:
-      params:
-        bond_denom: "uaes"
+  name: bob
+  coins: ["5token", "100000stake"]
